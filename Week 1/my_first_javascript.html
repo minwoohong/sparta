@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function hey(){
+            alert('안녕!');
+        }
+
+    </script>
+
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+        * {
+            font-family: 'Jeju Gothic', sans-serif;
+        }
+
+        .entire-page {
+            width: 900px;
+            margin: auto;
+        }
+
+        .card-comment {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .sample-form {
+            width: 550px;
+            margin: 20px auto;
+            padding: 40px;
+            border: grey solid;
+            border-radius: 5px;
+            border-width: thin;
+        }
+    </style>
+
+    <title>나홀로 링크 메모장</title>
+</head>
+
+<body>
+    <div class="entire-page">
+
+        <!-- Jumbotron Area -->
+        <div class="jumbotron">
+            <h1 class="display-4">나홀로 링크 메모장!</h1>
+            <p class="lead">중요한 링크를 저장해두고, 나중에 볼 수 있는 공간입니다!</p>
+            <hr class="my-4">
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">포스팅박스 열기</a>
+            </p>
+        </div>
+
+        <!-- Form Field Area -->
+        <div class="sample-form">
+            <div class="form-group">
+                <label for="exampleInputEmail1">URL 입력</label>
+                <input type="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp">
+                <small id="textHelp" class="form-text text-muted">스크랩을 원하는 기사의 URL을 입력해 주세요</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">코멘트 남기기</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button onclick="hey()" type="submit" class="btn btn-primary">기사 저장</button>
+        </div>
+
+        <!-- Card Deck Area -->
+        <div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://www.ancient-origins.net/sites/default/files/field/image/Agesilaus-II-cover.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="...">
+                            <h5 class="card-title">여기 기사 제목이 들어가죠</h5>
+                        </a>
+                        <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
+                        <!-- <p class="card-comment">여기에 코멘트가 들어갑니다.</p> -->
+                        <div class="alert alert-primary" role="alert">
+                            여기에 코멘트가 들어갑니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://www.ancient-origins.net/sites/default/files/field/image/Agesilaus-II-cover.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="...">
+                            <h5 class="card-title">여기 기사 제목이 들어가죠</h5>
+                        </a>
+                        <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
+                        <!-- <p class="card-comment">여기에 코멘트가 들어갑니다.</p> -->
+                        <div class="alert alert-primary" role="alert">
+                            여기에 코멘트가 들어갑니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://www.ancient-origins.net/sites/default/files/field/image/Agesilaus-II-cover.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="...">
+                            <h5 class="card-title">여기 기사 제목이 들어가죠</h5>
+                        </a>
+                        <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
+                        <!-- <p class="card-comment">여기에 코멘트가 들어갑니다.</p> -->
+                        <div class="alert alert-primary" role="alert">
+                            여기에 코멘트가 들어갑니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://www.ancient-origins.net/sites/default/files/field/image/Agesilaus-II-cover.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="...">
+                            <h5 class="card-title">여기 기사 제목이 들어가죠</h5>
+                        </a>
+                        <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
+                        <!-- <p class="card-comment">여기에 코멘트가 들어갑니다.</p> -->
+                        <div class="alert alert-primary" role="alert">
+                            여기에 코멘트가 들어갑니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://www.ancient-origins.net/sites/default/files/field/image/Agesilaus-II-cover.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="...">
+                            <h5 class="card-title">여기 기사 제목이 들어가죠</h5>
+                        </a>
+                        <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
+                        <!-- <p class="card-comment">여기에 코멘트가 들어갑니다.</p> -->
+                        <div class="alert alert-primary" role="alert">
+                            여기에 코멘트가 들어갑니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://www.ancient-origins.net/sites/default/files/field/image/Agesilaus-II-cover.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <a href="...">
+                            <h5 class="card-title">여기 기사 제목이 들어가죠</h5>
+                        </a>
+                        <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
+                        <!-- <p class="card-comment">여기에 코멘트가 들어갑니다.</p> -->
+                        <div class="alert alert-primary" role="alert">
+                            여기에 코멘트가 들어갑니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
