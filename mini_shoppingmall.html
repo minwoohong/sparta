@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="https://s3.ap-northeast-2.amazonaws.com/scc.minwoohong.com/favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+        * {
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        .wrap {
+            width: 500px;
+            margin: 10px auto;
+        }
+
+        h1 {
+            font-size: 20pt;
+            font-weight: bolder;
+            display: block;
+        }
+
+        h1.product_title {
+            display: inline;
+        }
+
+        .product-image {
+            margin: 20px auto;
+            width: 500px;
+            border-radius: 10px;
+        }
+
+        .product_description {
+            margin: 10px auto;
+        }
+
+        .product_order {
+            margin: 30px auto;
+        }
+
+        .order_info {
+            margin: 10px auto;
+        }
+
+        .order_button {
+            width: 200px;
+            margin: auto;
+        }
+
+        .myclass {
+            display: block;
+            width: 115px;
+            align-content: center;
+            text-align: center
+        }
+
+        #fx_info{
+            color: #7F121B;
+        }
+
+
+    </style>
+
+    <script>
+        function order_complete() {
+            if ($('#customerNameInput').val() == '') {
+                alert('주문자 이름을 입력해 주세요!');
+            }
+            else if ($('#productCountInput').val() == '선택하기') {
+                alert('수량을 입력해 주세요!');
+            }
+            else if ($('#adressInput').val() == '') {
+                alert('주소를 입력해 주세요!');
+            }
+            else if ($('#phoneNumberInput').val() == '') {
+                alert('전화번호를 입력해 주세요!');
+            }
+            else {
+                alert('주문이 완료되었습니다!');
+                $('#customerNameInput').val('');
+                $('#productCountInput').val('');
+                $('#adressInput').val('');
+                $('#phoneNumberInput').val('');
+            }
+        }
+
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "https://api.manana.kr/exchange/rate.json",
+                data: {},
+                success: function (response) {
+                    // 환율정보 가져오기
+                    let FXrate = response[1]['rate'];
+                    let temphtml = `${FXrate}`;
+                    $('#fx_info').append(temphtml);
+                }
+            })
+        });
+
+    </script>
+
+    <title>Porsche Official Dealer: 2020 Spring Promotion </title>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- Product Image Area -->
+        <div>
+            <img class="product-image" src="https://www.top-rider.com/news/photo/201907/28361_101484_5027.jpg"></div>
+
+        <!-- Product Info Area -->
+        <div class="product_info">
+            <h1 class="product_title">911 Carrera Models</h1>&nbsp;&nbsp;&nbsp;&nbsp;가격: 147,900,000원
+            <p class="product_description">새로운 911은 이전 세대의 모델들을 모두 합한 산물이며, 과거의 반영이자 미래에 대한 비전입니다. 시대의 아이콘이 된 실루엣. 세월이
+                흘러도 변하지 않는 디자인. 수많은 레이스에서의 우승으로부터 영감을 받아 항상 한발 앞선 기술. 8세대 911을 통해 우리는 과거를 뒤로 하고 미래를 향해 나아가고 있습니다.</p>
+        </div>
+
+        <!-- Product Order Field Area -->
+        <div class="product_order">
+            <h1>주문하기</h1>
+            <p id="fx_info">* USD-KRW 환율: </p>
+            <div class="input-group order_info ">
+                <div class="input-group-prepend myclass">
+                    <span class="input-group-text myclass">주문자 이름</span>
+                </div>
+                <input id="customerNameInput" type="text" class="form-control" aria-label="With textarea" />
+            </div>
+            <div class="input-group order_info">
+                <div class="input-group-prepend myclass">
+                    <label class="input-group-text myclass" for="inputGroupSelect01">수량</label>
+                </div>
+                <select id="productCountInput" class="custom-select" id="inputGroupSelect01">
+                    <option selected>선택하기</option>
+                    <option value="1">1대</option>
+                    <option value="2">2대</option>
+                    <option value="3">3대</option>
+                </select>
+            </div>
+            <div class="input-group order_info">
+                <div class="input-group-prepend myclass">
+                    <span class="input-group-text myclass">주소</span>
+                </div>
+                <input id="adressInput" type="text" class="form-control" aria-label="With textarea" />
+            </div>
+            <div class="input-group order_info">
+                <div class="input-group-prepend myclass">
+                    <span class="input-group-text myclass">전화번호</span>
+                </div>
+                <input id="phoneNumberInput" type="text" class="form-control" aria-label="With textarea" />
+            </div>
+
+            <div class="order_button">
+                <button type="button" onclick="order_complete()" class="btn btn-primary order_button"
+                    data-toggle="button" aria-pressed="false">
+                    주문하기
+                </button>
+            </div>
+
+        </div>
+</body>
+
+</html>
